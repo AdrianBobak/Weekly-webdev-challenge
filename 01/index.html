@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>01</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400" rel="stylesheet">
+</head>
+<body>
+	<div class="header">
+		<img src="images/logo.png">
+	</div>
+	<div class="flexConteiner">
+		<div class="column">
+			<div class="container">
+				<div class="allForm">
+					<h2>Register form</h2>
+					<div class="formContainer">
+						<form>
+							<div class="formInput">
+								<i class="fas fa-user"></i>
+								<input type="text" name="username" placeholder="Username">
+							</div>
+							<div class="formInput">
+								<i class="fas fa-lock"></i>
+								<input type="password" name="password" placeholder="Password">
+							</div>
+							<div class="formInput">
+								<i class="fas fa-lock"></i>
+								<input type="password" name="confirmPassword" placeholder="Confirm password">
+							</div>
+							<div class="formInput">
+								<i class="fas fa-envelope"></i>
+								<input type="email" name="email" placeholder="Email">
+							</div>
+							<div class="formInput noMargin">
+								<i class="fas fa-globe-americas"></i>
+								<input list="cities" name="location" placeholder="Your location">
+								<datalist id="cities">
+									<option value="Paris">Paris</option>
+									<option value="London">London</option>
+									<option value="Roma">Roma</option>
+									<option value="Madrid">Madrid</option>
+								</datalist>
+							</div>
+							<div class="formRadio">
+								<input type="checkbox" name="agree">
+								<span class="checkmark"></span>
+								<p>I have read and accept the terms of use.</p>
+							</div>
+							<input type="submit" value="Sign up">
+						</form>
+					</div>
+				</div>
+				<div class="allForm">
+					<h2>Send email</h2>
+					<div class="formContainer">
+						<form>
+							<div class="formInput">
+								<i class="fas fa-user"></i>
+								<input type="text" name="yourname" placeholder="Your name">
+							</div>
+							<div class="formInput">
+								<i class="fas fa-envelope"></i>
+								<input type="email" name="email" placeholder="Your email">
+							</div>
+							<div class="formInput noMargin">
+								<textarea rows="10" name="comment" form="usrform" placeholder="Enter text here..."></textarea>
+							</div>
+							<div class="formRadio">
+								<input type="checkbox" name="agree">
+								<span class="checkmark"></span>
+								<p>Send a copy to my Email</p>
+							</div>
+							<input type="submit" value="Send email">
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="column">
+			<div class="container">
+				<div class="allForm">
+					<h2>Sign in form</h2>
+					<div class="formContainer">
+						<form>
+							<div class="formInput">
+								<i class="fas fa-user"></i>
+								<input type="text" name="username" placeholder="Username">
+							</div>
+							<div class="formInput">
+								<i class="fas fa-lock"></i>
+								<input type="password" name="password" placeholder="Password">
+							</div>
+							<div class="elemsInRow">
+								<div class="formRadio">
+									<input type="checkbox" name="agree">
+									<span class="checkmark"></span>
+									<p>Remember me</p>
+								</div>
+								<input type="submit" value="Sign in">
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="allForm">
+					<h2>Recover form</h2>
+					<div class="formContainer">
+						<form>
+							<div class="formInput">
+								<i class="fas fa-envelope"></i>
+								<input type="email" name="email" placeholder="Enter your email">
+							</div>
+							<div class="formInput">
+								<i class="fas fa-mobile-alt"></i>
+								<input type="tel" name="phone" placeholder="Enter your phone number">
+							</div>
+							<div class="elemsInRow">
+								<input type="submit" value="Send">
+								<input type="submit" value="Done" disabled>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="allForm">
+					<h2>Subscribe form</h2>
+					<div class="formContainer">
+						<form>
+							<div class="formInput">
+								<i class="fas fa-envelope"></i>
+								<input type="email" name="email" placeholder="Enter your email">
+							</div>
+							<div class="elemsInRow">
+								<input type="submit" value="Subscribe">
+								<input class="nope" type="submit" value="No, thanks">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
