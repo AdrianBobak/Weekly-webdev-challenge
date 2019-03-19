@@ -57,23 +57,6 @@ function blogSlider(){
 window.addEventListener("load", blogSlider);
 
 
-function galleryImgResize(){
-    const imgs = document.querySelectorAll("#gallery .galleryContainer img");
-    imgs.forEach(function(img){
-        img.parentNode.style.minHeight = (img.parentNode.clientWidth/100)*66 + "px";
-        img.style.width = (img.parentNode.clientWidth) + "px";
-        img.style.height = "auto";
-        if(img.parentNode.clientHeight > img.clientHeight){
-            img.style.height = (img.parentNode.clientHeight) + "px";
-            img.style.width = "auto";
-        }
-    });
-}
-window.addEventListener("resize", galleryImgResize);
-window.addEventListener("load", galleryImgResize);
-
-
-
 function hamburgerMenu(){
     const hamburger = document.querySelector("#hamburger");
     const menuList = document.querySelector("header ul");
