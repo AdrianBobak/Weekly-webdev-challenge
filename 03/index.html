@@ -4,24 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto+Slab:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="scss/style.css">
     <title>03</title>
 </head>
 <body>
-    <nav class="main-nav">
-        <div class="main-nav__logo">
-            <a class="main-nav__logo-link" href="#">
-                <img src="images/logo.jpg" alt="Logo">
-            </a>
-        </div>
-        <ul class="main-nav__menu">
-            <li class="main-nav__menu-item">Home</li>
-            <li class="main-nav__menu-item">About</li>
-            <li class="main-nav__menu-item">Blog</li>
-            <li class="main-nav__menu-item">Portfolio</li>
-            <li class="main-nav__menu-item">Contact</li>
-        </ul>
-    </nav>
+    <header class="main-nav" id="mainNavbar">
+        <nav class="main-nav__container">
+            <div class="main-nav__logo">
+                <a class="main-nav__logo-link" href="#">
+                    <img src="images/logo.jpg" alt="Logo">
+                </a>
+            </div>
+            <ul class="main-nav__menu">
+                <li class="main-nav__menu-item"><a href="#">Home</a></li>
+                <li class="main-nav__menu-item"><a href="#">About</a></li>
+                <li class="main-nav__menu-item"><a href="#">Blog</a></li>
+                <li class="main-nav__menu-item"><a href="#">Portfolio</a></li>
+                <li class="main-nav__menu-item"><a href="#">Contact</a></li>
+            </ul>
+            <button class="main-nav__toggle" aria-expanded="false" data-target="#mainNavbar">
+                <i class="main-nav__toggle-icon" aria-hidden="true"></i>
+            </button>
+        </nav>
+    </header>
+<script src="js/scripts.js"></script>
 </body>
 </html>
