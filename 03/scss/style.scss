@@ -3,6 +3,10 @@
 $navHeight: 90px;
 $textColor: #777;
 $bgColor: #fff;
+$headingColor: #fff;
+$btnColor: #7cc576;
+
+// BASICS
 
 * {
     box-sizing: border-box;
@@ -13,16 +17,56 @@ $bgColor: #fff;
 body {
     margin-top: $navHeight;
     height: 3000px;
-    background: goldenrod;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    color: $headingColor;
+}
+
+h1 {
+    font-size: 55px;
 }
 
 p {
     font-family: 'Roboto Slab', serif;
 }
+
+// REUSABLE
+
+.btn {
+    max-width: 200px;
+    margin-top: 40px;
+    background: $btnColor;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 25px;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+
+    &:hover {
+        transform: scale(1.15);
+        box-shadow: 1px 1px 7px 2px rgba(0, 0, 0, 0.3);
+    }
+}
+
+.subtitle {
+    text-align: center;
+    color: $headingColor;
+    font-size: 16px;
+
+    &--white {
+        color: #fff;
+    }
+}
+
+// NAV MENU
 
 .main-nav {
     position: fixed;
@@ -151,5 +195,26 @@ p {
                 text-align: center;
             }
         }
+    }
+}
+
+// HERO
+
+.hero {
+    height: 500px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/hero-bg.jpg');
+    background-position: center center;
+    background-size: cover;
+
+    &__container {
+        max-width: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }
