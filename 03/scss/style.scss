@@ -1,0 +1,151 @@
+@import 'normalize', 'mixins';
+
+body {
+    height: 3000px;
+    background: goldenrod;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    font-family: 'Roboto Slab', serif;
+}
+
+$navHeight: 90px;
+$textColor: #777;
+$bgColor: #fff;
+
+* {
+    box-sizing: border-box;
+}
+
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $navHeight;
+    display: flex;
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.2);
+    background-color: $bgColor;
+
+    &__container {
+        flex-grow: 1;
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__menu {
+        display: flex;
+    }
+
+    &__menu-item {
+        list-style: none;
+        margin-left: 30px;
+        display: flex;
+        align-items: center;
+
+        & a {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $textColor;
+
+            &:hover {
+                color: #000;
+            }
+        }
+    }
+
+    &__toggle {
+        display: none;
+    }
+}
+
+@media (max-width: 767px){
+
+    .main-nav {
+        &__toggle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 40px;
+            background-color: $bgColor;
+            border-radius: 5px;
+            border: 1px solid $textColor;
+
+            & i {
+                width: 100%;
+                @include nav-toggle-icons;
+    
+                &:before {
+                    content: "";
+                    @include nav-toggle-icons;
+                    margin-top: -7px;
+                }
+    
+                &:after {
+                    content: "";
+                    @include nav-toggle-icons;
+                    margin-top: 11px;
+                }
+            }
+
+            &.active i {
+                transform: rotate(45deg);
+
+                &:before {
+                    width: 0;
+                    height: 0;
+                }
+
+                &:after {
+                    transform: rotate(-90deg);
+                    margin-top: 7px;
+                }
+            }
+        }
+
+        &__menu {
+            position: absolute;
+            flex-direction: column;
+            top: 0;
+            right: -100%;
+            overflow: auto;
+            background-color: $bgColor;
+            padding: ($navHeight + 15px) 50px 15px 50px;
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            z-index: -1;
+            transition: 0.5s;
+        }
+
+        &.active &__menu {
+            right: 0%
+        }
+
+        &__menu-item {
+            margin-left: 0;
+            border-bottom: 1px solid $textColor;
+            min-height: 60px;
+
+            &:last-child {
+                border-bottom: none;
+            }
+
+            & a {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}
