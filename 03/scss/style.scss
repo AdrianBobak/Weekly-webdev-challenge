@@ -23,15 +23,28 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
     text-align: center;
-    color: $headingColor;
 }
 
 h1 {
     font-size: 55px;
+    color: $headingColor;
+}
+
+h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
 }
 
 p {
     font-family: 'Roboto Slab', serif;
+    font-size: 14px;
+    color: $textColor;
+    line-height: 25px;
 }
 
 // REUSABLE
@@ -58,8 +71,8 @@ p {
 
 .subtitle {
     text-align: center;
-    color: $headingColor;
-    font-size: 16px;
+    color: $textColor;
+    font-size: 17px;
 
     &--white {
         color: #fff;
@@ -216,5 +229,42 @@ p {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+}
+
+// PROFESSIONAL SERVICES
+
+.white-section {
+    padding: 80px 15px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.services-grid {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    & i {
+        font-size: 60px;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 767px){
+    .services-grid {
+        display: block;
+
+        &__column {
+            margin-bottom: 30px;
+        }
     }
 }
