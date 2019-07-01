@@ -1,0 +1,13 @@
+@mixin nav-toggle-icons {
+    display: block;
+    height: 3px;
+    background-color: $textColor;
+    transition: 0.5s;
+}
+
+@mixin bg-image($link, $position: center center, $size: cover) {
+    background-image: url($link);
+    background-position: $position;
+    background-size: $size;
+    background-repeat: no-repeat;
+}
