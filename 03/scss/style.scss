@@ -256,7 +256,7 @@ p {
 
 // PROFESSIONAL SERVICES
 
-.white-section {
+.section-container {
     padding: 80px 15px;
     max-width: 1200px;
     margin: auto;
@@ -346,6 +346,7 @@ p {
     }
     
     &__container {
+        margin-top: 40px;
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
