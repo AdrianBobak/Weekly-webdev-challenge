@@ -11,3 +11,16 @@
     background-size: $size;
     background-repeat: no-repeat;
 }
+
+@mixin line-between-icons($side){
+    content: "";
+    display: block;
+    position: absolute;
+    width: 110px;
+    height: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $textColor;
+    margin-#{$side}: 50px;
+    #{$side}: 100%;
+}

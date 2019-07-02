@@ -391,3 +391,83 @@ p {
         margin: 0 15px;
     }
 }
+
+// CULTURE & VALUES
+
+.culture-values {
+    background-color: #f9f9f9;
+    position: relative;
+    z-index: -1;
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 50px;
+    }
+
+    &__column {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & p, & h4 {
+            margin-top: 7px;
+            text-align: center;
+        }
+    }
+
+    &__icon {
+        position: relative;
+
+        &:before {
+            @include line-between-icons(right);
+        }
+
+        &:after {
+            @include line-between-icons(left);
+        }
+
+        &--first:before, &--last:after {
+            display: none;
+        }
+
+        & i {
+            font-size: 100px;
+            color: $textColor;
+            margin-bottom: 7px;
+        }
+    }
+}
+
+@media (max-width: 991px){
+
+    .culture-values {
+
+        &__icon {
+
+            &:before, &:after {
+                width: 65px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px){
+
+    .culture-values {
+
+        &__container {
+            display: block;
+        }
+
+        &__icon {
+
+            position: static;
+
+            &:before, &:after {
+                display: none;
+            }
+        }
+    }
+}
