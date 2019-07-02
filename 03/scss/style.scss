@@ -601,3 +601,17 @@ p {
     flex-direction: column;
     align-items: center;
 }
+
+// LOGOS
+
+.client-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 15px 0;
+
+    & img {
+        margin: 15px;
+        max-width: 100%;
+    }
+}
