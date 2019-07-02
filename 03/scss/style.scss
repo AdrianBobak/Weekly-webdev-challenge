@@ -681,3 +681,49 @@ footer {
         }
     }
 }
+
+// COPYRIGHT
+
+.copyright {
+    background-color: $bgColor;
+
+    &__grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        & p {
+            padding: 20px 20px;
+        }
+
+        & .social {
+            align-self: center;
+            justify-self: center;
+            font-size: 30px;
+        }
+    }
+}
+
+@media (max-width: 767px){
+    .copyright {
+        &__grid {
+            display: block;
+
+            & p {
+                padding: 20px 0;
+                text-align: center;
+            }
+
+            & .social {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 20px;
+
+                & i {
+                    margin: 0 5px;
+                }
+            }
+        }
+    }
+}
