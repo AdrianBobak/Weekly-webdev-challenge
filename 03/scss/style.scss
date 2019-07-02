@@ -6,6 +6,7 @@ $lightenTextColor: #ccc;
 $bgColor: #fff;
 $headingColor: #fff;
 $btnColor: #7cc576;
+$littleGrey: #f9f9f9;
 
 // BASICS
 
@@ -34,6 +35,10 @@ h1 {
 h2 {
     font-size: 35px;
     margin-bottom: 15px;
+
+    &.white {
+        color: $headingColor;
+    }
 }
 
 h3 {
@@ -395,7 +400,7 @@ p {
 // CULTURE & VALUES
 
 .culture-values {
-    background-color: #f9f9f9;
+    background-color: $littleGrey;
     position: relative;
     z-index: -1;
 
@@ -463,10 +468,115 @@ p {
 
         &__icon {
 
-            position: static;
-
             &:before, &:after {
                 display: none;
+            }
+        }
+    }
+}
+
+// CLIENTS
+
+.clients {
+
+    position: relative;
+    z-index: -1;
+
+    &__container {
+        margin: 40px 100px 0 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &__single-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin: 0 20px;
+            position: relative;
+            overflow: hidden;
+
+            & img {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    
+        &__single-opinion {
+            margin: 0 20px;
+            min-height: 150px;
+            flex: 1;
+            background-color: $littleGrey;
+            position: relative;
+            z-index: -1;
+            text-align: center;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%) rotate(45deg);
+                width: 20px;
+                height: 20px;
+                background-color: $littleGrey;
+                left: -10px;
+            }
+        }
+
+        &__txt {
+            font-size: 16px;
+        }
+
+        &__author {
+            color: $btnColor;
+            margin-top: 10px;
+        }
+    }
+
+    &__container:nth-child(even){
+        
+        & .clients__container__single-opinion {
+            order: 1;
+
+            &:before {
+                left: unset;
+                right: -10px;
+            }
+        }
+
+        & .clients__container__single-image {
+            order: 2;
+        }
+    }
+}
+
+@media (max-width: 767px){
+    .clients {
+        &__container {
+            flex-direction: column;
+            margin: 40px 40px 0 40px;
+
+            &__single-image {
+                margin-bottom: -30px;
+                order: 1;
+            }
+
+            &__single-opinion {
+                order: 2 !important;
+                padding-top: 50px;
+
+                &:before {
+                    display: none;
+                }
             }
         }
     }
