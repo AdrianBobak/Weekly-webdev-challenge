@@ -46,8 +46,14 @@ h3 {
     margin-bottom: 15px;
 }
 
-h4 {
+h4, h5 {
     text-align: left;
+}
+
+h5 {
+    color: $headingColor;
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 
 p {
@@ -613,5 +619,65 @@ p {
     & img {
         margin: 15px;
         max-width: 100%;
+    }
+}
+
+// FOOTER
+
+footer {
+    background-color: #222;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+    
+    &__single {
+
+        &__container {
+            display: flex;
+            margin-top: 15px;
+            
+            & i {
+                color: $headingColor;
+                font-size: 25px;
+                margin-right: 15px;
+            }
+
+            & p {
+                color: $headingColor;
+            }
+
+            & .hashtag {
+                font-weight: 600;
+            }
+
+            & .date {
+                font-size: 11px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px){
+    .footer-grid {
+        display: block;
+
+        &__single {
+            margin: 0 25% 50px 25%;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 400px){
+    .footer-grid {
+        &__single {
+            margin: 0 15px 50px 15px;
+        }
     }
 }
