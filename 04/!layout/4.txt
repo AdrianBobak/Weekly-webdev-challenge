@@ -1,0 +1,10 @@
+zadanie 4
+
+UWAGA: nie trzeba ciac wszystkiego!
+Robimy elementy od góry do featured story (do slidera) WLACZNIE!
+
+1. start 05.02.
+2. technika wykonania: HTML/CSS, ewentualnie JS (bez frameworków)
+3. slider moze byc gotowy, liczy sie umiejetnosc poprawnego wdrozenia :)
+Zdjecia musicie sami ogarnac (byle jakies przyzwoite :P)
+4. rwd
