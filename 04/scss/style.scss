@@ -1,7 +1,188 @@
 @import 'normalize', 'mixins';
 
+$textColor: #475055;
+$bodyBgColor: #4a627e;
+$elemsBgColor: #fff;
+$elemsActiveBg: #56ccc8;
+$iconColor: #b2b9bd;
+$navbarHeight: 60px;
+
+// GENERAL
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+body {
+    background-color: $bodyBgColor;
+}
+
+p, li, h1, h2, h3, h4, h5, h6, span, a {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: $textColor;
+    font-weight: 500;
+}
+
+// HEADER
+
+.main-nav {
+    background-color: $elemsBgColor;
+    display: flex;
+    height: $navbarHeight;
+    max-width: 1200px;
+    margin: 120px auto 20px auto;
+
+    &__toggle {
+        min-width: $navbarHeight;
+        background-color: $elemsActiveBg;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    &__toggle-icon, &__toggle-icon:before, &__toggle-icon:after {
+        display: block;
+        background-color: #fff;
+        width: ($navbarHeight / 3 * 2);
+        height: 4px;
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+
+    &__toggle-icon {
+
+        &::before {
+            content: "";
+            margin-top: -9px;
+        }
+
+        &::after {
+            content: "";
+            margin-top: 14px;
+        }
+    }
+
+    &__toggle.active &__toggle-icon {
+        transform: rotate(90deg);
+        width: ($navbarHeight / 2);
+
+        &::before, &::after {
+            width: ($navbarHeight / 2);
+        }
+
+    }
+
+    &__menu {
+        margin: 0 40px;
+        display: flex;
+        align-self: center;
+    }
+
+    &__menu-item {
+        list-style: none;
+        margin-right: 40px;
+
+        & a {
+            transition: 0.2s;
+        }
+
+        &.active a, &:hover a {
+            color: $elemsActiveBg;
+        }
+    }
+
+    &__bars-container {
+        margin-left: auto;
+        display: flex;
+
+        & i {
+            font-size: 20px;
+            color: $iconColor;
+            transition: 0.3s;
+
+            &:hover {
+                transform: scale(1.3);
+                color: $elemsActiveBg;
+            }
+        }
+    }
+
+    &__search-bar, &__social-bar, &__login-bar {
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        border-right: 1px solid $iconColor;
+    }
+
+    &__search-bar {
+
+        justify-content: flex-end;
+
+        & input {
+            margin-right: 20px;
+            border: 1px solid $iconColor;
+            height: ($navbarHeight / 2);
+            border-radius: 15px;
+            transition: 0.3s;
+            width: 0px;
+            opacity: 0;
+            outline: none;
+            padding: 0 15px;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 300;
+            font-size: 15px;
+
+            &.active {
+                opacity: 1;
+                width: 100%;
+            }
+        }
+
+        & button {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            outline: none;
+        }
+    }
+
+    &__social-bar {
+
+        & i {
+            margin-right: 20px;
+        }
+
+        & a:last-child i {
+            margin-right: 0;
+        }
+    }
+
+    &__login-bar {
+        border: none;
+    }
+}
+
+@media (max-width: 991px){
+    .main-nav {
+        margin: 60px auto 20px auto;
+        max-width: 700px;
+
+        &__menu {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 450px){
+    .main-nav {
+
+        &__search-bar {
+            display: none;
+        }
+    }
 }
