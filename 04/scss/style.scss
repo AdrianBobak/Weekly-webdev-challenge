@@ -186,3 +186,132 @@ p, li, h1, h2, h3, h4, h5, h6, span, a {
         }
     }
 }
+
+// CONTENT
+
+.content {
+    max-width: 1200px;
+    height: 630px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    -moz-transition: 1s; // doesn't work on Chrome
+
+    &.active {
+        grid-template-columns: 0fr 1fr;
+        grid-gap: 0px;
+    }
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: $elemsBgColor;
+    overflow: hidden;
+
+    &__main-menu {
+        
+        &__elem {
+            border-bottom: 1px solid $iconColor;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            transition: 0.2s;
+
+            & i {
+                margin-right: 20px;
+                font-size: 20px;
+                color: $iconColor;
+                min-width: 25px;
+            }
+
+            &:hover, &.active {
+                background-color: $elemsActiveBg;
+
+                & i, & span {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        background-color: $iconColor;
+        padding: 20px 20px 5px 20px;
+
+        &__elem {
+            display: flex;
+            margin-bottom: 15px;
+
+            & i {
+                margin-right: 20px;
+                font-size: 20px;
+                color: #fff;
+                min-width: 25px;
+            }
+
+            & span {
+                color: #fff;
+                font-size: 14px;
+                line-height: 19px;
+            }
+        }
+    }
+
+    &__submenu {
+        background-color: #152840;
+        display: grid;
+
+        &__section {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: 0.3s;
+            padding: 18px 0;
+            border-top: 1px solid #152840;
+            border-bottom: 1px solid #152840;
+
+            &:hover {
+                background-color: #263a54;
+                border-top: 1px solid #445e78;
+                border-bottom: 1px solid #445e78;
+            }
+        }
+
+        &__heading-elem {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2px 20px 10px 20px;
+
+            & span, & i {
+                color: $elemsActiveBg;
+            }
+
+            & i {
+                font-size: 20px;
+            }
+        }
+
+        &__elem {
+            display: block;
+            padding: 2px 20px;
+            font-size: 15px;
+            color: #fff;
+            font-weight: 300;
+            transition: 0.2s;
+
+            &:hover {
+                color: $elemsActiveBg;
+            }
+        }
+    }
+}
+
+.tiles {
+    background-color: $elemsBgColor;
+    min-height: 150px;
+}
