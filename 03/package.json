@@ -1,0 +1,16 @@
+{
+  "name": "03",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass-watch": "node-sass scss/style.scss css/style.css -w",
+    "browser-sync": "browser-sync start --server --files css/*.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "node-sass": "^4.12.0"
+  }
+}
