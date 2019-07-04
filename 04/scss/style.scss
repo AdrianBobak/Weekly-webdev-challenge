@@ -19,11 +19,20 @@ body {
     background-color: $bodyBgColor;
 }
 
-p, li, h1, h2, h3, h4, h5, h6, span, a {
+p, li, h1, h2, h3, h4, h5, h6, span, a, input {
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
     color: $textColor;
     font-weight: 500;
+}
+
+h2 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+p {
+    font-weight: 300;
 }
 
 // HEADER
@@ -47,7 +56,7 @@ p, li, h1, h2, h3, h4, h5, h6, span, a {
 
     &__toggle-icon, &__toggle-icon:before, &__toggle-icon:after {
         display: block;
-        background-color: #fff;
+        background-color: $elemsBgColor;
         width: ($navbarHeight / 3 * 2);
         height: 4px;
         border-radius: 5px;
@@ -196,11 +205,11 @@ p, li, h1, h2, h3, h4, h5, h6, span, a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
-    -moz-transition: 1s; // doesn't work on Chrome
 
     &.active {
         grid-template-columns: 0fr 1fr;
         grid-gap: 0px;
+        height: 400px;
     }
 }
 
@@ -211,6 +220,8 @@ p, li, h1, h2, h3, h4, h5, h6, span, a {
     overflow: hidden;
 
     &__main-menu {
+        display: flex;
+        flex-direction: column;
         
         &__elem {
             border-bottom: 1px solid $iconColor;
@@ -218,6 +229,7 @@ p, li, h1, h2, h3, h4, h5, h6, span, a {
             display: flex;
             align-items: center;
             transition: 0.2s;
+            flex: 1;
 
             & i {
                 margin-right: 20px;
@@ -230,7 +242,7 @@ p, li, h1, h2, h3, h4, h5, h6, span, a {
                 background-color: $elemsActiveBg;
 
                 & i, & span {
-                    color: #fff;
+                    color: $elemsBgColor;
                 }
             }
         }
@@ -249,12 +261,12 @@ p, li, h1, h2, h3, h4, h5, h6, span, a {
             & i {
                 margin-right: 20px;
                 font-size: 20px;
-                color: #fff;
+                color: $elemsBgColor;
                 min-width: 25px;
             }
 
             & span {
-                color: #fff;
+                color: $elemsBgColor;
                 font-size: 14px;
                 line-height: 19px;
             }
@@ -300,7 +312,7 @@ p, li, h1, h2, h3, h4, h5, h6, span, a {
             display: block;
             padding: 2px 20px;
             font-size: 15px;
-            color: #fff;
+            color: $elemsBgColor;
             font-weight: 300;
             transition: 0.2s;
 
@@ -312,6 +324,171 @@ p, li, h1, h2, h3, h4, h5, h6, span, a {
 }
 
 .tiles {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+
+    .content.active & {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    &__upper-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
+
+    &__downer-container {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 20px;
+    }
+}
+
+.social-list {
     background-color: $elemsBgColor;
-    min-height: 150px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+
+    &__elem {
+        display: flex;
+        padding: 10px;
+        align-items: center;
+        flex: 1;
+
+        & i {
+            color: $iconColor;
+            font-size: 30px;
+            margin-right: 20px;
+            transition: 0.2s;
+            width: 30px;
+        }
+
+        & span {
+            transition: 0.2s;
+        }
+
+        &:hover i, &:hover span {
+            color: $elemsActiveBg;
+        }
+    }
+}
+
+.facebook {
+    background-color: #4d6baa;
+}
+
+.twitter {
+    background-color: #4fc6f8;
+}
+
+.social-buttons {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+
+    & > a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 25px;
+    }
+
+    &__main-icon {
+        color: $elemsBgColor;
+        font-size: 50px;
+        padding-bottom: 25px;
+    }
+
+    & i, & span {
+        color: $elemsBgColor;
+    }
+
+    &__stats {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__likes {
+        margin-right: auto;
+    }
+
+    &__follow {
+        display: flex;
+        align-items: center;
+
+        & span {
+            font-weight: 300;
+            margin-right: 10px;
+        }
+
+        & i {
+            font-size: 20px;
+        }
+    }
+}
+
+.cta {
+    background-color: $elemsBgColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign-in {
+    & i {
+        font-size: 30px;
+        margin: 10px 5px 0 5px;
+        color: $iconColor;
+        transition: 0.3s;
+
+        &:hover {
+            color: $elemsActiveBg;
+        }
+    }
+}
+
+.newsletter {
+    background-color: $elemsBgColor;
+
+    & p {
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    &__form {
+        display: flex;
+        margin-top: 15px;
+        padding: 0 25px;
+        width: 100%;
+
+        & input {
+            flex: 1;
+            min-height: 35px;
+            margin: 0 5px;
+            font-weight: 300;
+            font-size: 15px;
+            padding: 0 15px;
+        }
+
+        & .submit {
+            flex: 0 0 100px;
+            font-weight: 400;
+            text-transform: uppercase;
+            background-color: #ea6060;
+            border: none;
+            border-radius: 5px;
+            color: $elemsBgColor;
+            transition: 0.3s;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
 }
