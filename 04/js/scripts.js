@@ -1,3 +1,5 @@
+import Glide from './glide.esm.js';
+
 const togglerInit = () => {
     const toggler = (e) => {
 
@@ -20,3 +22,12 @@ const togglerInit = () => {
 }
 
 window.addEventListener('load', togglerInit);
+
+
+// SLIDER
+
+new Glide('.glide', {
+    autoplay: 5000,
+    animationDuration: 800,
+    rewindDuration: 1600
+}).mount();
