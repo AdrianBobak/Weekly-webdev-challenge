@@ -297,7 +297,7 @@ p {
 
     &__submenu {
         background-color: #152840;
-        display: grid;
+        // display: grid;
 
         &__section {
             display: flex;
@@ -332,7 +332,7 @@ p {
 
         &__elem {
             display: block;
-            padding: 2px 20px;
+            padding: 4px 20px;
             font-size: 15px;
             color: $elemsBgColor;
             font-weight: 300;

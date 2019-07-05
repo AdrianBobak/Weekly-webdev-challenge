@@ -750,8 +750,6 @@ p {
 
 .navbar__submenu {
   background-color: #152840;
-  display: -ms-grid;
-  display: grid;
 }
 
 .navbar__submenu__section {
@@ -801,7 +799,7 @@ p {
 
 .navbar__submenu__elem {
   display: block;
-  padding: 2px 20px;
+  padding: 4px 20px;
   font-size: 15px;
   color: #fff;
   font-weight: 300;
