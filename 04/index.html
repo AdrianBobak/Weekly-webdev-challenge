@@ -38,32 +38,32 @@
     </header>
     <section class="navbarToggler content">
         <nav class="navbar">
-            <div class="navbar__main-menu">
-                <a href="#" class="navbar__main-menu__elem">
+            <div id="navParent" class="navbar__main-menu">
+                <a href="#" class="navbar__main-menu__elem" data-name="Home">
                     <i class="fas fa-home"></i>
                     <span>Home</span>
                 </a>
-                <a href="#" class="navbar__main-menu__elem">
+                <a href="#" class="navbar__main-menu__elem" data-name="Store">
                     <i class="fas fa-shopping-cart"></i>
                     <span>Store</span>
                 </a>
-                <a href="#" class="navbar__main-menu__elem">
+                <a href="#" class="navbar__main-menu__elem" data-name="Blog">
                     <i class="fas fa-edit"></i>
                     <span>Blog</span>
                 </a>
-                <a href="#" class="navbar__main-menu__elem">
+                <a href="#" class="navbar__main-menu__elem" data-name="Community">
                     <i class="fas fa-users"></i>
                     <span>Community</span>
                 </a>
-                <a href="#" class="navbar__main-menu__elem">
+                <a href="#" class="navbar__main-menu__elem" data-name="Contests">
                     <i class="fas fa-trophy"></i>
                     <span>Contests</span>
                 </a>
-                <a href="#" class="navbar__main-menu__elem">
+                <a href="#" class="navbar__main-menu__elem" data-name="About">
                     <i class="fas fa-info-circle"></i>
                     <span>About</span>
                 </a>
-                <a href="#" class="navbar__main-menu__elem">
+                <a href="#" class="navbar__main-menu__elem" data-name="Contact">
                     <i class="fas fa-envelope"></i>
                     <span>Contact</span>
                 </a>
@@ -82,8 +82,8 @@
                     </div>
                 </div>
             </div>
-            <div class="navbar__submenu">
-                <div class="navbar__submenu__section">
+            <div id="navChildren" class="navbar__submenu">
+                <div class="navbar__submenu__section" data-parent="Home Store Community About Contact">
                     <a href="#" class="navbar__submenu__heading-elem">
                         <span>Tech</span>
                         <i class="fas fa-arrow-alt-circle-right"></i>
@@ -92,7 +92,7 @@
                     <a class="navbar__submenu__elem" href="#">Gadgets</a>
                     <a class="navbar__submenu__elem" href="#">Mobile</a>
                 </div>
-                <div class="navbar__submenu__section">
+                <div class="navbar__submenu__section" data-parent="Home Blog Community Contact">
                     <a href="#" class="navbar__submenu__heading-elem">
                         <span>Entertainment</span>
                         <i class="fas fa-arrow-alt-circle-right"></i>
@@ -102,7 +102,7 @@
                     <a class="navbar__submenu__elem" href="#">Music</a>
                     <a class="navbar__submenu__elem" href="#">Sport</a>
                 </div>
-                <div class="navbar__submenu__section">
+                <div class="navbar__submenu__section" data-parent="Home Store Blog Contests About">
                     <a href="#" class="navbar__submenu__heading-elem">
                         <span>Business</span>
                         <i class="fas fa-arrow-alt-circle-right"></i>
@@ -111,7 +111,7 @@
                     <a class="navbar__submenu__elem" href="#">Marketing</a>
                     <a class="navbar__submenu__elem" href="#">Media</a>
                 </div>
-                <div class="navbar__submenu__section">
+                <div class="navbar__submenu__section" data-parent="Community Contests Blog About Contact">
                     <a href="#" class="navbar__submenu__heading-elem">
                         <span>Lifestyle</span>
                         <i class="fas fa-arrow-alt-circle-right"></i>
