@@ -1045,6 +1045,9 @@ p {
     height: 0;
     width: 0;
   }
+  .hide {
+    display: none !important;
+  }
 }
 
 @media (max-width: 991px) {
