@@ -40,6 +40,10 @@ h3 {
     font-size: 30px;
 }
 
+button {
+    cursor: pointer;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -168,5 +172,28 @@ h3 {
                 }
             }
         }
+    }
+}
+
+// BACK TO TOP BUTTON
+
+.back-to-top {
+    width: $navHeight / 1.8;
+    height: $navHeight / 1.8;
+    position: fixed;
+    bottom: $navHeight / 1.8;;
+    right: $navHeight / 1.8;;
+    background: #c2c2c2;
+    border: none;
+    border-radius: 5px;
+    transition: $transition;
+
+    & i {
+        font-size: ($navHeight / 3.3);
+        color: $grey;
+    }
+
+    &:hover {
+        transform: scale(1.1);
     }
 }
