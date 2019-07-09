@@ -27,8 +27,7 @@ p, li {
 }
 
 h1 {
-    font-size: 36px;
-    color: $white;
+    font-size: 30px;
 }
 
 h2 {
@@ -44,9 +43,28 @@ button {
     cursor: pointer;
 }
 
+a {
+    text-decoration: none;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.btn {
+    background-color: $buttonRed;
+    padding: 15px 45px;
+    display: inline-block;
+    margin: 30px 0;
+    color: $white;
+    border-radius: 5px;
+    transition: $transition;
+
+    &:hover {
+        transform: scale(1.2);
+        box-shadow: 0px 0px 40px -12px rgba(0,0,0,0.57);
+    }
 }
 
 @media (max-width: 1250px){
