@@ -197,3 +197,75 @@ button {
         transform: scale(1.1);
     }
 }
+
+// HERO
+
+.hero {
+    background-color: $bgSectionDarkBlue;
+    
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 50px;
+        align-items: center;
+    }
+
+    &__content {
+        margin: 50px 0;
+    }
+
+    &__title {
+        margin-bottom: 25px;
+        color: $white;
+    }
+
+    &__subtitle {
+        font-size: 20px;
+        color: $white;
+    }
+
+    &__img {
+        height: 100%;
+        padding: 50px 0 50px 50px;
+        position: relative;
+
+        &::before, &::after {
+            content: "";
+            position: absolute;
+            background-color: $grey;
+            z-index: 1;
+        }
+
+        &::before {
+            width: 15px;
+            top: 55px;
+            bottom: 41px;
+            left: 37px;
+            transform: skew(0, -35deg);
+        }
+
+        &::after {
+            height: 15px;
+            left: 43px;
+            right: 5px;
+            bottom: 36px;
+            transform: skew(-35deg, 0);
+        }
+    }
+
+    &__img-container {
+        position: relative;
+        min-height: 300px;
+        overflow: hidden;
+    }
+
+    & img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
