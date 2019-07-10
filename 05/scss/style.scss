@@ -9,6 +9,7 @@ $buttonRed: #ea5b58;
 $white: #fff;
 $black: #000;
 $grey: #747474;
+$lightGrey: #eeeeee;
 $transition: 0.3s;
 $navHeight: 80px;
 
@@ -33,6 +34,7 @@ h1 {
 h2 {
     font-size: 40px;
     color: $white;
+    text-align: center;
 }
 
 .h2-subtitle {
@@ -75,8 +77,10 @@ a {
     display: inline-block;
     margin: 30px 0;
     color: $white;
+    border: none;
     border-radius: 5px;
     transition: $transition;
+    font-family: $fontFamily;
 
     &:hover {
         transform: scale(1.2);
@@ -287,9 +291,7 @@ a {
     background-color: $bgSectionDarkBlue;
     
     &__container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 50px;
+        @include grid(1fr 1fr);
         align-items: center;
     }
 
@@ -376,9 +378,7 @@ a {
 
     &__grid-container {
         margin: 60px 0;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-gap: 50px;
+        @include grid(1fr 1fr 1fr 1fr);
     }
 
     &__column {
