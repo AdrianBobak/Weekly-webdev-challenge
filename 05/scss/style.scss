@@ -642,4 +642,119 @@ a {
     }
 }
 
+// CONTACT
+
+.contact {
+    background-color: $bgSectionBlue;
+    padding: 60px 0 60px 0;
+
+    &__grid-container {
+        margin-top: 60px;
+        @include grid(1fr 1fr);
+    }
+
+    &__content {
+        color: $white;
+
+        & p {
+            margin: 10px 0;
+        }
+    }
+
+    &__iconbox {
+        display: flex;
+        align-items: center;
+
+        & i {
+            width: 20px;
+            margin-right: 10px;
+        }
+    }
+
+    &__socials {
+        margin-top: 20px;
+
+        & a {
+            color: $lightGrey;
+            font-size: 30px;
+            margin-right: 25px;
+            transition: $transition;
+
+            &:hover {
+                color: $white;
+            }
+        }
+    }
+
+    &__input {
+        padding: 10px;
+        font-family: $fontFamily;
+        font-size: 14px;
+        border: none;
+        border-radius: 3px;
+        background-color: $lightGrey;
+        margin: 10px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+
+        & input {
+            min-height: 40px;
+            margin: 10px;
+        }
+
+        & textarea {
+            min-height: 100px;
+        }
+
+        & .btn {
+            align-self: flex-start;
+        }
+
+        &-row {
+            display: flex;
+            
+            & input {
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 50px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px){
+    .contact {
+        &__grid-container {
+            display: block;
+        }
+
+        &__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        &__socials {
+            & a {
+                margin: 0 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: 450px){
+    .contact {
+        &__form-row {
+            flex-direction: column;
+
+            & input {
+                margin-bottom: 0;
+            }
+        }
+    }
 }
