@@ -30,18 +30,25 @@ export const testimonials = () => {
     });
 }
 
-const execute = (toActivate, toRemove, transition = 2000) => {
+const execute = (toActivate, toRemove, transition = 300) => {
     toRemove.style.opacity = "0";
     toActivate.style.opacity = "0";
 
-    setTimeout(function(){
-        toRemove.classList.remove('active');
-        toActivate.classList.add('active');
+    const switchClasses = () => {
+        return new Promise(function(resolve) {
+            setTimeout(function(){
+                toRemove.classList.remove('active');
+                toActivate.classList.add('active');
+                resolve();
+            }, (transition));
+        });
+    };
 
+    switchClasses().then(result => {
         setTimeout(function(){
             toActivate.style.opacity = "1";
         }, (transition / 2));
-    }, (transition / 2));
+    });
 }
 
 const bulletsActive = (bullets, activeBullet) => {
