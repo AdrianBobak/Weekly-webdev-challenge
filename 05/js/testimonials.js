@@ -1,11 +1,11 @@
-export const testimonials = () => {
-    const elems = document.querySelectorAll('[data-testimonialTarget]');
-    const bullets = document.querySelectorAll('[data-testimonial]');
+export const testimonials = (testimonialTarget, testimonialBtn) => {
+    const elems = document.querySelectorAll(`[data-${testimonialTarget}]`);
+    const bullets = document.querySelectorAll(`[data-${testimonialBtn}]`);
 
     const switchTestimonial = e => {
         let bullet = e.target;
-        if(!bullet.dataset.testimonial) bullet = e.target.parentNode;
-        const target = bullet.dataset.testimonial;
+        if(!bullet.dataset[testimonialBtn]) bullet = e.target.parentNode;
+        const target = bullet.dataset[testimonialBtn];
 
         const transition = parseFloat(getComputedStyle(elems[0]).getPropertyValue('transition-duration')) * 1000;
         let toRemove;
@@ -13,10 +13,10 @@ export const testimonials = () => {
 
         elems.forEach((elem, index) => {
             if(elem.classList.contains('active')){
-                if(elem.dataset.testimonialtarget === target) return;
+                if(elem.dataset[testimonialTarget] === target) return;
                 else toRemove = index;
             }
-            if(elem.dataset.testimonialtarget === target) toActivate = index;
+            if(elem.dataset[testimonialTarget] === target) toActivate = index;
         });
         
         if(Number.isInteger(toRemove) && Number.isInteger(toActivate)){

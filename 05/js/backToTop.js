@@ -1,4 +1,4 @@
-export const backToTop = () => {
+export const backToTop = (button) => {
 
     const scroller = (value) => {
         window.scroll(0, (window.pageYOffset - value));
@@ -21,6 +21,6 @@ export const backToTop = () => {
         setTimeout(interval, 30)
     }
 
-    const btn = document.querySelector('#backToTop');
+    const btn = document.querySelector(button);
     btn.addEventListener('click', interval);
 }

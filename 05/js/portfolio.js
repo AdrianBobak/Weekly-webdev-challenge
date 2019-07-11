@@ -1,15 +1,15 @@
-export const portfolio = () => {
-    const elems = document.querySelectorAll('[data-category]');
-    const buttons = document.querySelectorAll('[data-target]');
+export const portfolio = (dataCategory, dataTarget) => {
+    const elems = document.querySelectorAll(`[data-${dataCategory}]`);
+    const buttons = document.querySelectorAll(`[data-${dataTarget}]`);
 
-
+    
     elems.forEach((elem, index) => {
         if(index >= 6) elem.classList.add('hidden');
     })
 
     const showElems = e => {
         let btn = e.target;
-        if(!btn.dataset.target){
+        if(!btn.dataset[dataTarget]){
             btn = e.target.parentNode;
         }
 
@@ -19,13 +19,13 @@ export const portfolio = () => {
         
         btn.classList.add('active');
 
-        if(btn.dataset.target == 'all'){
+        if(btn.dataset[dataTarget] == 'all'){
             elems.forEach(elem => {
                 elem.classList.remove('hidden');
             })
         } else {
             elems.forEach(elem => {
-                if(elem.dataset.category.search(btn.dataset.target) > -1) elem.classList.remove('hidden');
+                if(elem.dataset[dataCategory].search(btn.dataset[dataTarget]) > -1) elem.classList.remove('hidden');
                 else elem.classList.add('hidden');
             });
         }
