@@ -1,0 +1,6 @@
+zadanie 5
+
+1. start 21.02.
+2. technika wykonania: HTML/CSS,JS
+3. RWD opcjonalnie dla chetnych
+Zdjecia musicie sami ogarnac (byle jakies przyzwoite :P)
