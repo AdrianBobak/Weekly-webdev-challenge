@@ -1,7 +1,7 @@
-import {toggler} from './toggler.js';
-import {backToTop} from './backToTop.js';
-import {portfolio} from './portfolio.js';
-import {testimonials} from './testimonials.js';
+import {toggler} from './utils/toggler.js';
+import {backToTop} from './utils/backToTop.js';
+import {portfolio} from './utils/portfolio.js';
+import {testimonials} from './utils/testimonials.js';
 
 const loadAll = () => {
     toggler('toggler');
