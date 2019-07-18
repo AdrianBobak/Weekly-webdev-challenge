@@ -9,7 +9,35 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <header>
+        <div class="info-bar">
+            <div class="container info-bar__container">
+                <div class="info-bar__number">
+                    <p>Custom care: 888-23-4567</p>
+                </div>
+                <div class="info-bar__user">
+                    <div class="info-bar__currency">
+                        <select class="info-bar__currency__select">
+                            <option value="usd">US $</option>
+                            <option value="euro">Euro €</option>
+                            <option value="pound">UK £</option>
+                        </select>
+                    </div>
+                    <a href="#" class="info-bar__account">
+                        <i class="fas fa-user"></i>
+                        <p>My account</p>
+                    </a>
+                    <div class="info-bar__search">
+                        <input class="info-bar__search__bar" id="searchbar" type="search" placeholder="Search...">
+                        <button class="info-bar__search__btn" data-activate="#searchbar"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
     <script type="module" src="js/scripts.js"></script>
 </body>
 </html>
