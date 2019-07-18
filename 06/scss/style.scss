@@ -166,3 +166,183 @@ button {
         }
     }
 }
+
+// NAV
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    padding: 20px 15px;
+
+    &__navigation {
+        display: flex;
+        margin-left: auto;
+
+        &--submenu {
+            display: none;
+            position: absolute;
+            background-color: $logoColor;
+            margin: 0;
+            padding: 20px;
+        }
+    }
+
+    &__navigation-toggler {
+        display: none;
+    }
+
+    &__navigation--submenu &__nav-item--submenu {
+        font-size: 14px;
+        @include border($white, 1px, bottom);
+        padding: 10px 0;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        & a {
+            color: $black;
+        }
+    }
+
+    &__nav-item {
+
+        &>a {
+            color: $black;
+            margin-right: 25px;
+        }
+    }
+}
+
+@media(min-width: 967px){
+    .main-nav {
+        &__nav-item:hover &__navigation--submenu {
+            display: block;
+        }
+    }
+}
+
+.basket {
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+
+    &__btn, &__info {
+        display: flex;
+        padding: 10px;
+        font-size: 12px;
+        @include border($lightGrey);
+        justify-content: flex-end;
+        color: $darkGrey;
+    }
+
+    &__btn {
+        background-color: transparent;
+        justify-content: space-between;
+    }
+
+    &__info {
+        border-top: none;
+        background-color: #fafafa;
+        text-transform: uppercase;
+
+        & i {
+            margin-right: auto;
+        }
+
+        &__items {
+            margin-right: 5px;
+            padding-right: 5px;
+            @include border($darkGrey, 1px, right);
+        }
+    }
+}
+
+@media(max-width: 966px){
+    .main-nav {
+        justify-content: space-between;
+        position: relative;
+        z-index: 1;
+        margin-bottom: $togglerMenuHeight + 15px;
+
+        &__navigation {
+            z-index: -1;
+            display: flex;
+            flex-direction: column;
+            left: 15px;
+            right: 15px;
+            position: absolute;
+            top: 100%;
+            padding-top: 0;
+            background-color: lighten($logoColor, 15%);
+            max-height: 0;
+            transition: $transition;
+            overflow: hidden;
+
+            &--submenu {
+                display: flex;
+                background-color: transparent;
+                position: static;
+            }
+        }
+
+        &__navigation.active {
+            max-height: 9999px;
+            padding-top: $togglerMenuHeight + 15px;
+        }
+
+        &__nav-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 30px;
+            font-weight: 700;
+
+            & a {
+                margin: 0;
+                display: flex;
+                justify-content: center;
+            }
+
+            & i {
+                display: none;
+            }
+        }
+
+        &__navigation--submenu {
+            margin: 0 15px;
+            flex-direction: column;
+            @include border($white, 1px, bottom);
+        }
+
+        &__nav-item--submenu {
+            border: none !important;
+            font-weight: 500;
+        }
+
+        &__navigation-toggler {
+            position: absolute;
+            top: 100%;
+            left: 15px;
+            right: 15px;
+            display: flex;
+
+            & button {
+                width: 100%;
+                height: $togglerMenuHeight;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 20px;
+                background-color: $logoColor;
+                border: none;
+                color: $white;
+                text-transform: uppercase;
+
+                & i {
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+}
