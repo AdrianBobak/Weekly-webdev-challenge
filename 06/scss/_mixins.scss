@@ -3,3 +3,11 @@
     grid-template-columns: $columns;
     grid-gap: $gap;
 }
+
+@mixin border($color, $pixels: 1px, $direction: null){
+    @if($direction != null){
+        border-#{$direction}: $pixels solid $color;
+    } @else {
+        border: $pixels solid $color;
+    }
+}
