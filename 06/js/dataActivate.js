@@ -2,10 +2,10 @@ export const dataActivate = (selector) => {
     const activators = document.querySelectorAll(`[data-${selector}]`);
 
     const makeActive = (e) => {
-        let target = e.target.dataset[selector];
-        if(!target) target = e.target.parentNode.dataset[selector];
+        let target = e.target;
+        while(!target.dataset[selector] && target.parentNode) target = target.parentNode;
         
-        const items = document.querySelectorAll(target);
+        const items = document.querySelectorAll(target.dataset[selector]);
         items.forEach(item => item.classList.toggle('active')); 
     }
 

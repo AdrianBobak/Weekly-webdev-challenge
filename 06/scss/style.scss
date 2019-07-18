@@ -23,7 +23,7 @@ button {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    min-height: 30px;
+    padding: 0 15px;
 }
 
 // HEADING
@@ -38,10 +38,6 @@ button {
     &__container {
         display: flex;
         align-items: center;
-    }
-
-    &__number {
-        margin-left: 15px;
     }
 
     &__user {
@@ -109,6 +105,7 @@ button {
 
 @media(max-width: 640px){
     .info-bar {
+        height: auto;
         background-color: $white;
 
         &__container {
