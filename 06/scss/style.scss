@@ -3,8 +3,10 @@
 $black: #000;
 $white: #fff;
 $darkGrey: #444;
-$lightGrey: #838383;
+$lightGrey: #d6d6d6;
+$logoColor: #fd926d;
 $infoBarHeight: 30px;
+$togglerMenuHeight: 45px;
 $transition: 0.3s;
 
 // GENERAL
@@ -14,6 +16,14 @@ $transition: 0.3s;
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
 }
 
 button {
