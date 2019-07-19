@@ -3,7 +3,7 @@
 $black: #000;
 $white: #fff;
 $darkGrey: #444;
-$lightGrey: #d6d6d6;
+$lightGrey: #ededed;
 $logoColor: #fd926d;
 $infoBarHeight: 30px;
 $togglerMenuHeight: 45px;
@@ -40,10 +40,13 @@ button {
 
 .info-bar {
     background-color: $black;
-    color: $white;
-    font-size: 12px;
-    text-transform: uppercase;
     height: $infoBarHeight;
+
+    & p {
+        color: $white;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
 
     &__container {
         display: flex;
@@ -127,8 +130,11 @@ button {
             height: $infoBarHeight * 1.5;
             display: flex;
             align-items: center;
-            color: $lightGrey;
             font-size: 15px;
+
+            & p {
+                color: $darkGrey;
+            }
         }
 
         &__user {
@@ -350,10 +356,15 @@ button {
     }
 }
 
+@media(max-width: 450px) {
+    .basket {
+        min-width: 150px;
+    }
+}
+
 // SLIDER
 
 .main-slider {
-    margin-bottom: 40px;
 
     &__slide {
         position: relative;
@@ -385,10 +396,9 @@ button {
     }
 
     &__bullets {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: -30px;
+        display: flex;
+        justify-content: center;
+        margin: 20px 0 25px 0;
 
         &__bullet {
             width: 10px;
@@ -396,12 +406,18 @@ button {
             border-radius: 50%;
             background-color: $lightGrey;
             border: none;
-            margin: 0 3px;
+            margin: 0 6px;
             outline: none;
 
             &.glide__bullet--active {
                 background-color: $logoColor;
             }
         }
+    }
+}
+
+@media(max-width: 640px) {
+    .main-slider {
+        display: none;
     }
 }
