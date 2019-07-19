@@ -104,7 +104,36 @@
             </div>
         </nav>
     </header>
-    <div style="background: red; height: 10000px"></div>
+    <section class="main-slider">
+        <div class="glide">
+            <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                    <li class="glide__slide main-slider__slide">
+                        <a href="#"><img class="main-slider__slide__img" src="images/slide1.jpg"></a>
+                    </li>
+                    <li class="glide__slide main-slider__slide">
+                        <a href="#"><img class="main-slider__slide__img" src="images/slide2.jpg"></a>
+                    </li>
+                    <li class="glide__slide main-slider__slide">
+                        <a href="#"><img class="main-slider__slide__img" src="images/slide3.jpg"></a>
+                    </li>
+                </ul>
+                <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left main-slider__arrow main-slider__arrow--left" data-glide-dir="<">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="glide__arrow glide__arrow--right main-slider__arrow main-slider__arrow--right" data-glide-dir=">">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="glide__bullets main-slider__bullets" data-glide-el="controls[nav]">
+                    <button class="glide__bullet main-slider__bullets__bullet" data-glide-dir="=0"></button>
+                    <button class="glide__bullet main-slider__bullets__bullet" data-glide-dir="=1"></button>
+                    <button class="glide__bullet main-slider__bullets__bullet" data-glide-dir="=2"></button>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 
