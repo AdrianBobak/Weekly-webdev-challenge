@@ -349,3 +349,59 @@ button {
         }
     }
 }
+
+// SLIDER
+
+.main-slider {
+    margin-bottom: 40px;
+
+    &__slide {
+        position: relative;
+
+        &__img {
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+
+    &__arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 100px;
+        width: 30px;
+        background-color: #fefefd;
+        border: none;
+        color: $lightGrey;
+        font-size: 20px;
+
+        &--left {
+            left: 0;
+        }
+
+        &--right {
+            right: 0;
+        }
+    }
+
+    &__bullets {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -30px;
+
+        &__bullet {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $lightGrey;
+            border: none;
+            margin: 0 3px;
+            outline: none;
+
+            &.glide__bullet--active {
+                background-color: $logoColor;
+            }
+        }
+    }
+}
