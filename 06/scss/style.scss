@@ -101,6 +101,7 @@ button {
                 max-width: 150px;
                 padding-left: 10px;
                 margin-right: 10px;
+                z-index: 2;
             }
         }
 
@@ -173,6 +174,8 @@ button {
     display: flex;
     align-items: center;
     padding: 20px 15px;
+    position: relative;
+    z-index: 2;
 
     &__navigation {
         display: flex;
