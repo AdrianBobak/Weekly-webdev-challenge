@@ -523,3 +523,52 @@ button {
         }
     }
 }
+
+// ADS SECTION
+
+.ads {
+    margin: 50px 0;
+    
+    &__container {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        // height: 400px;
+        grid-template-areas: 
+            "first first second second"
+            "first first third fourth";
+    }
+
+    &__ad {
+        overflow: hidden;
+
+        & img {
+            width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__first {
+        grid-area: first;
+    }
+
+    &__second {
+        grid-area: second;
+    }
+
+    &__third {
+        grid-area: third;
+    }
+
+    &__fourth {
+        grid-area: fourth;
+    }
+}
+
+@media(max-width: 640px){
+    .ads {
+        display: none;
+    }
+}
