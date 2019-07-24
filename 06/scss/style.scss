@@ -8,6 +8,8 @@ $logoColor: #fd926d;
 $infoBarHeight: 30px;
 $togglerMenuHeight: 45px;
 $transition: 0.3s;
+$productTrackHeight: 440px;
+$saleItemHeight: $productTrackHeight - 40px;
 
 // GENERAL
 
@@ -39,9 +41,10 @@ button {
     background-color: $logoColor;
     border: none;
     color: $white;
-    padding: 6px 6px 3px 6px;
+    padding: 6px 9px 3px 9px;
     font-size: 14px;
     @include border(darken($logoColor, 10%), 3px, bottom);
+    text-transform: uppercase;
 }
 
 .container {
@@ -570,5 +573,283 @@ button {
 @media(max-width: 640px){
     .ads {
         display: none;
+    }
+}
+
+// PRODUCTS SECTION
+
+.products {
+
+    &__navbar {
+        display: flex;
+        justify-content: space-between;
+
+        &__button {
+            background-color: $white;
+            border: none;
+            text-transform: uppercase;
+            font-size: 13px;
+            padding: 0 15px;
+            height: 40px;
+            color: $darkGrey;
+
+            &.active {
+                background-color: $logoColor;
+                color: $white;
+            }
+        }
+    }
+
+    &__categories {
+        display: flex;
+    }
+
+    &__toggler {
+        display: none;
+    }
+
+    &__arrows {
+        display: flex;
+
+        & button {
+            font-size: 23px;
+            background-color: $lightGrey;
+            color: darken($lightGrey, 15%);
+        }
+    }
+
+    &__container {
+        display: flex;
+        overflow: hidden;
+        background-color:$logoColor;
+        padding: 0 10px;
+    }
+
+    &__slide {
+        display: none;
+        justify-content: center;
+        margin: 20px 10px;
+
+        &.active {
+            display: flex;
+        }
+    }
+
+    &__mobile-show {
+        display: none;
+    }
+}
+
+// SINGLE PRODUCT
+
+.sale-item {
+    display: block;
+    height: $saleItemHeight;
+    width: $saleItemHeight / 2;
+    background-color: $white;
+    color: $black;
+    transition: $transition;
+    position: relative;
+
+    &__shop-it {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $darkGrey;
+        border-radius: 50%;
+        width: $saleItemHeight / 2.7;
+        height: $saleItemHeight / 2.7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        transition: $transition;
+        opacity: 0;
+
+        & i {
+            font-size: 30px;
+            margin-bottom: 8px;
+            color: $white;
+        }
+
+        & span {
+            text-transform: uppercase;
+            font-size: 12px;
+            color: $white;
+        }
+    }
+
+    &__image {
+        height: $saleItemHeight / 7 * 5;
+        overflow: hidden;
+        position: relative;
+
+        & img {
+            width: 100%;
+            min-height: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
+    }
+
+    &__details {
+        height: $saleItemHeight / 7 * 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__name {
+        text-transform: uppercase;
+        font-size: 12px;
+    }
+
+    &__price {
+        font-size: 25px;
+        margin: 5px 0;
+    }
+
+    &__special-offer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        display: block;
+        background-color: $white;
+        width: 50px;
+        height: 50px;
+        font-size: 10px;
+        text-transform: uppercase;
+        overflow: hidden;
+
+        & span {
+            display: block;
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            z-index: 2;
+            color: $white;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            background-color: $darkGrey;
+            width: 70px;
+            height: 70px;
+            transform: rotate(45deg);
+            position: absolute;
+            top: -35px;
+            left: -35px;
+        }
+    }
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 0px 10px 3px rgba(0,0,0,0.2);
+
+        & .sale-item__shop-it {
+            opacity: 1;
+        }
+    }
+}
+
+@media(max-width: 640px){
+
+    .products {
+        background-color: $logoColor;
+        padding-bottom: 20px;
+
+        &__navbar {
+            margin-top: 20px;
+            padding: 0;
+            position: relative;
+        }
+
+        &__categories {
+            display: none;
+
+            &.active {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                top: 40px;
+                left: 0;
+                width: 100%;
+                z-index: 3;
+                background-color: $logoColor;
+            }
+
+            &.active &__elem {
+                width: 100%;
+                display: flex;
+                
+                & button {
+                    width: 100%;
+                    background-color: $logoColor;
+                }
+            }
+        }
+
+        &__arrows {
+            display: none;
+        }
+
+        &__toggler {
+            display: block;
+            background-color: $logoColor;
+            width: 100%;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+
+            & span {
+                font-size: 16px;
+                color: $white;
+            }
+
+            & i {
+                color: $white;
+                font-size: 20px;
+            }
+        }
+
+        &__container {
+            flex-wrap: wrap;
+        }
+
+        &__slide {
+            flex-basis: auto;
+            flex-grow: 1;
+            flex-shrink: 1;
+            display: none;
+
+            &.active {
+                display: none;
+
+                &.mobile-visible {
+                    display: flex;
+                }
+            }
+        }
+
+        &__mobile-show {
+            display: block;
+            margin: 0 auto;
+            background-color: $black;
+            border: none;
+            color: $white;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            font-size: 13px;
+        }
     }
 }
