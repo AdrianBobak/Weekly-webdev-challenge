@@ -21,6 +21,7 @@ h1 {
     color: $white;
     font-weight: 300;
     font-size: 40px;
+    text-align: center;
 }
 
 p {
@@ -74,11 +75,19 @@ button {
     }
 }
 
+@media (max-width: 800px) {
+    .main-header {
+        
+        &__description {
+            margin: 0 30px;
+        }
+    }
+}
+
 // TIMELINE
 
 .timeline {
     position: relative;
-    overflow: auto;
     margin-top: 30px;
     margin-bottom: 130px;
     padding-top: 30px;
@@ -262,5 +271,51 @@ button {
                 font-size: 18px;
             }
         }    
+    }
+}
+
+@media (max-width: 800px){
+    .timeline {
+        flex-direction: column;
+
+        &::before {
+            right: 20px;
+            left: unset;
+            transform: none;
+        }
+
+        &::after {
+            right: 32px;
+            left: unset;
+            transform: none;
+        }
+
+        &__item {
+            width: 100%;
+            margin-top: 25px !important;
+            margin-left: 0;
+            margin-right: 0;
+            padding-right: 70px;
+
+            &::before {
+                left: unset !important;
+                right: 26px !important;
+            }
+
+            &__container {
+                &::before {
+                    left: unset !important;
+                    right: -10px;
+                }
+            }
+
+            &__img-container {
+
+                & span {
+                    font-size: 25px;
+                    bottom: -2px;
+                }
+            }
+        }
     }
 }
