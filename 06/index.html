@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>06</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="info-bar">
+            <div class="container info-bar__container">
+                <div class="info-bar__number">
+                    <p>Custom care: 888-23-4567</p>
+                </div>
+                <div class="info-bar__user">
+                    <div class="info-bar__currency">
+                        <select class="info-bar__currency__select">
+                            <option value="usd">US $</option>
+                            <option value="euro">Euro €</option>
+                            <option value="pound">UK £</option>
+                        </select>
+                    </div>
+                    <a href="#" class="info-bar__account">
+                        <i class="fas fa-user"></i>
+                        <p>My account</p>
+                    </a>
+                    <div class="info-bar__search">
+                        <input class="info-bar__search__bar" id="searchbar" type="search" placeholder="Search...">
+                        <button class="info-bar__search__btn" data-activate="#searchbar"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="main-nav container">
+            <div class="main-nav__logo">
+                <img src="images/logo.png" alt="logo">
+            </div>
+            <div class="main-nav__navigation-toggler" data-activate="#mainnavigation">
+                <button>
+                    <span>Menu</span>
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div> 
+            <ul id="mainnavigation" class="main-nav__navigation">
+                <li class="main-nav__nav-item">
+                    <a href="#">new <i class="fas fa-caret-down"></i></a>
+                    <ul class="main-nav__navigation--submenu">
+                        <li class="main-nav__nav-item--submenu"><a href="#">Lorem, ipsum dolor.</a></li>
+                        <li class="main-nav__nav-item--submenu"><a href="#">Lorem ipsum dolor sit.</a></li>
+                        <li class="main-nav__nav-item--submenu"><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                        <li class="main-nav__nav-item--submenu"><a href="#">Lorem, ipsum.</a></li>
+                    </ul>
+                </li>
+                <li class="main-nav__nav-item">
+                    <a href="#">designers <i class="fas fa-caret-down"></i></a>
+                    <ul class="main-nav__navigation--submenu">
+                        <li class="main-nav__nav-item--submenu"><a href="#">Lorem, ipsum dolor.</a></li>
+                        <li class="main-nav__nav-item--submenu"><a href="#">Lorem ipsum dolor sit.</a></li>
+                        <li class="main-nav__nav-item--submenu"><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                        <li class="main-nav__nav-item--submenu"><a href="#">Lorem, ipsum.</a></li>
+                    </ul>
+                </li>
+                <li class="main-nav__nav-item">
+                    <a href="#">women <i class="fas fa-caret-down"></i></a>
+                    <ul class="main-nav__navigation--submenu">
+                        <li class="main-nav__nav-item--submenu"><a href="#">Lorem, ipsum dolor.</a></li>
+                        <li class="main-nav__nav-item--submenu"><a href="#">Lorem ipsum dolor sit.</a></li>
+                        <li class="main-nav__nav-item--submenu"><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                        <li class="main-nav__nav-item--submenu"><a href="#">Lorem, ipsum.</a></li>
+                    </ul>
+                </li>
+                <li class="main-nav__nav-item">
+                    <a href="#">men <i class="fas fa-caret-down"></i></a>
+                    <ul class="main-nav__navigation--submenu">
+                        <li class="main-nav__nav-item--submenu"><a href="#">Lorem, ipsum dolor.</a></li>
+                        <li class="main-nav__nav-item--submenu"><a href="#">Lorem ipsum dolor sit.</a></li>
+                        <li class="main-nav__nav-item--submenu"><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                        <li class="main-nav__nav-item--submenu"><a href="#">Lorem, ipsum.</a></li>
+                    </ul>
+                </li>
+                <li class="main-nav__nav-item">
+                    <a href="#">clearence <i class="fas fa-caret-down"></i></a>
+                    <ul class="main-nav__navigation--submenu">
+                        <li class="main-nav__nav-item--submenu"><a href="#">Lorem, ipsum dolor.</a></li>
+                        <li class="main-nav__nav-item--submenu"><a href="#">Lorem ipsum dolor sit.</a></li>
+                        <li class="main-nav__nav-item--submenu"><a href="#">Lorem ipsum dolor sit amet.</a></li>
+                        <li class="main-nav__nav-item--submenu"><a href="#">Lorem, ipsum.</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="basket">
+                <button class="basket__btn">
+                    <span>Your cart</span>
+                    <i class="fas fa-caret-down"></i>
+                </button>
+                <div class="basket__info">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="basket__info__items">0 items</span>
+                    <span class="basket__info__price">$ 0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="main-slider">
+        <div class="glide">
+            <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                    <li class="glide__slide main-slider__slide">
+                        <a href="#"><img class="main-slider__slide__img" src="images/slide1.jpg"></a>
+                    </li>
+                    <li class="glide__slide main-slider__slide">
+                        <a href="#"><img class="main-slider__slide__img" src="images/slide2.jpg"></a>
+                    </li>
+                    <li class="glide__slide main-slider__slide">
+                        <a href="#"><img class="main-slider__slide__img" src="images/slide3.jpg"></a>
+                    </li>
+                </ul>
+                <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left main-slider__arrow main-slider__arrow--left" data-glide-dir="<">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="glide__arrow glide__arrow--right main-slider__arrow main-slider__arrow--right" data-glide-dir=">">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="glide__bullets main-slider__bullets" data-glide-el="controls[nav]">
+                    <button class="glide__bullet main-slider__bullets__bullet" data-glide-dir="=0"></button>
+                    <button class="glide__bullet main-slider__bullets__bullet" data-glide-dir="=1"></button>
+                    <button class="glide__bullet main-slider__bullets__bullet" data-glide-dir="=2"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="subscribe-bar">
+        <div class="container subscribe-bar__container">
+            <div class="subscribe-bar__newsletter">
+                <p>Stay updated</p>
+                <input id="newsletter" type="text" placeholder="Your email address">
+                <button class="btn" data-send="#newsletter"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="subscribe-bar__social-media">
+                <p>Find us here</p>
+                <a class="subscribe-bar__social-media__link" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="subscribe-bar__social-media__link" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="subscribe-bar__social-media__link" href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+        </div>
+    </section>
+    <section class="ads">
+        <div class="container ads__container">
+            <div class="ads__first ads__ad">
+                <a href="#"><img src="images/ad-first.jpg" alt="ad"></a>
+            </div>
+            <div class="ads__second ads__ad">
+                <a href="#"><img src="images/ad-second.jpg" alt="ad"></a>
+            </div>
+            <div class="ads__third ads__ad">
+                <a href="#"><img src="images/ad-third.jpg" alt="ad"></a>
+            </div>
+            <div class="ads__fourth ads__ad">
+                <a href="#"><img src="images/ad-fourth.jpg" alt="ad"></a>
+            </div>
+        </div>
+    </section>
+    <section class="products">
+            <div class="container products__navbar">
+                <button data-activate="#categoryToggler" class="products__navbar__button products__toggler">
+                    <span>what’s hot?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <ul id="categoryToggler" class="products__categories">
+                    <li class="products__categories__elem"><button data-activate="#categoryToggler" data-items=".products__slide" data-show="all" class="products__navbar__button product__categories__single active">what’s hot?</button></li>
+                    <li class="products__categories__elem"><button data-activate="#categoryToggler" data-items=".products__slide" data-show="designers" class="products__navbar__button product__categories__single">designers</button></li>
+                    <li class="products__categories__elem"><button data-activate="#categoryToggler" data-items=".products__slide" data-show="featured" class="products__navbar__button product__categories__single">featured</button></li>
+                    <li class="products__categories__elem"><button data-activate="#categoryToggler" data-items=".products__slide" data-show="latest" class="products__navbar__button product__categories__single">latest</button></li>
+                </ul>
+                <div class="products__arrows">
+                    <button class="products__navbar__button"><i class="fas fa-chevron-left"></i></button>
+                    <button class="products__navbar__button active"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            <ul class="products__container">
+                <li class="products__slide active mobile-visible">
+                    <a href="#" class="sale-item">
+                        <div class="sale-item__special-offer"><span>Sale</span></div>
+                        <div class="sale-item__image">
+                            <img src="images/product1.jpg" alt="product1">
+                            <div class="sale-item__shop-it">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span>Shop it</span>
+                            </div>
+                        </div>
+                        <div class="sale-item__details">
+                            <span class="sale-item__name">Mimosa Lace dress</span>
+                            <span class="sale-item__price">$76.95</span>
+                            <button class="btn">
+                                <span>Add to cart</span>
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </a>
+                </li>
+                <li class="products__slide active mobile-visible">
+                    <a href="#" class="sale-item">
+                        <div class="sale-item__image">
+                            <img src="images/product2.jpg" alt="product2">
+                            <div class="sale-item__shop-it">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span>Shop it</span>
+                            </div>
+                        </div>
+                        <div class="sale-item__details">
+                            <span class="sale-item__name">Mimosa Lace dress</span>
+                            <span class="sale-item__price">$76.95</span>
+                            <button class="btn">
+                                <span>Add to cart</span>
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </a>
+                </li>
+                <li class="products__slide active featured">
+                    <a href="#" class="sale-item">
+                        <div class="sale-item__special-offer"><span>Sale</span></div>
+                        <div class="sale-item__image">
+                            <img src="images/product3.jpg" alt="product3">
+                            <div class="sale-item__shop-it">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span>Shop it</span>
+                            </div>
+                        </div>
+                        <div class="sale-item__details">
+                            <span class="sale-item__name">Mimosa Lace dress</span>
+                            <span class="sale-item__price">$76.95</span>
+                            <button class="btn">
+                                <span>Add to cart</span>
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </a>
+                </li>
+                <li class="products__slide active latest featured">
+                    <a href="#" class="sale-item">
+                        <div class="sale-item__image">
+                            <img src="images/product4.jpg" alt="product4">
+                            <div class="sale-item__shop-it">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span>Shop it</span>
+                            </div>
+                        </div>
+                        <div class="sale-item__details">
+                            <span class="sale-item__name">Mimosa Lace dress</span>
+                            <span class="sale-item__price">$76.95</span>
+                            <button class="btn">
+                                <span>Add to cart</span>
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </a>
+                </li>
+                <li class="products__slide active designers latest">
+                    <a href="#" class="sale-item">
+                        <div class="sale-item__special-offer"><span>Sale</span></div>
+                        <div class="sale-item__image">
+                            <img src="images/product5.jpg" alt="product5">
+                            <div class="sale-item__shop-it">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span>Shop it</span>
+                            </div>
+                        </div>
+                        <div class="sale-item__details">
+                            <span class="sale-item__name">Mimosa Lace dress</span>
+                            <span class="sale-item__price">$76.95</span>
+                            <button class="btn">
+                                <span>Add to cart</span>
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </a>
+                </li>
+                <li class="products__slide active latest designers">
+                    <a href="#" class="sale-item">
+                        <div class="sale-item__image">
+                            <img src="images/product1.jpg" alt="product1">
+                            <div class="sale-item__shop-it">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span>Shop it</span>
+                            </div>
+                        </div>
+                        <div class="sale-item__details">
+                            <span class="sale-item__name">Mimosa Lace dress</span>
+                            <span class="sale-item__price">$76.95</span>
+                            <button class="btn">
+                                <span>Add to cart</span>
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </a>
+                </li>
+                <li class="products__slide active featured latest designers">
+                    <a href="#" class="sale-item">
+                        <div class="sale-item__special-offer"><span>Sale</span></div>
+                        <div class="sale-item__image">
+                            <img src="images/product2.jpg" alt="product2">
+                            <div class="sale-item__shop-it">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span>Shop it</span>
+                            </div>
+                        </div>
+                        <div class="sale-item__details">
+                            <span class="sale-item__name">Mimosa Lace dress</span>
+                            <span class="sale-item__price">$76.95</span>
+                            <button class="btn">
+                                <span>Add to cart</span>
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </a>
+                </li>
+                <li class="products__slide active designers">
+                    <a href="#" class="sale-item">
+                        <div class="sale-item__image">
+                            <img src="images/product3.jpg" alt="product3">
+                            <div class="sale-item__shop-it">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span>Shop it</span>
+                            </div>
+                        </div>
+                        <div class="sale-item__details">
+                            <span class="sale-item__name">Mimosa Lace dress</span>
+                            <span class="sale-item__price">$76.95</span>
+                            <button class="btn">
+                                <span>Add to cart</span>
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </a>
+                </li>
+                <li class="products__slide active latest featured">
+                    <a href="#" class="sale-item">
+                        <div class="sale-item__special-offer"><span>Sale</span></div>
+                        <div class="sale-item__image">
+                            <img src="images/product4.jpg" alt="product4">
+                            <div class="sale-item__shop-it">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span>Shop it</span>
+                            </div>
+                        </div>
+                        <div class="sale-item__details">
+                            <span class="sale-item__name">Mimosa Lace dress</span>
+                            <span class="sale-item__price">$76.95</span>
+                            <button class="btn">
+                                <span>Add to cart</span>
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </a>
+                </li>
+                <li class="products__slide active featured">
+                    <a href="#" class="sale-item">
+                        <div class="sale-item__image">
+                            <img src="images/product5.jpg" alt="product5">
+                            <div class="sale-item__shop-it">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span>Shop it</span>
+                            </div>
+                        </div>
+                        <div class="sale-item__details">
+                            <span class="sale-item__name">Mimosa Lace dress</span>
+                            <span class="sale-item__price">$76.95</span>
+                            <button class="btn">
+                                <span>Add to cart</span>
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </a>
+                </li>
+                <li class="products__slide active">
+                    <a href="#" class="sale-item">
+                        <div class="sale-item__special-offer"><span>Sale</span></div>
+                        <div class="sale-item__image">
+                            <img src="images/product1.jpg" alt="product1">
+                            <div class="sale-item__shop-it">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span>Shop it</span>
+                            </div>
+                        </div>
+                        <div class="sale-item__details">
+                            <span class="sale-item__name">Mimosa Lace dress</span>
+                            <span class="sale-item__price">$76.95</span>
+                            <button class="btn">
+                                <span>Add to cart</span>
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </a>
+                </li>
+                <li class="products__slide active designers">
+                    <a href="#" class="sale-item">
+                        <div class="sale-item__image">
+                            <img src="images/product2.jpg" alt="product2">
+                            <div class="sale-item__shop-it">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span>Shop it</span>
+                            </div>
+                        </div>
+                        <div class="sale-item__details">
+                            <span class="sale-item__name">Mimosa Lace dress</span>
+                            <span class="sale-item__price">$76.95</span>
+                            <button class="btn">
+                                <span>Add to cart</span>
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </a>
+                </li>
+                <li class="products__slide active featured">
+                    <a href="#" class="sale-item">
+                        <div class="sale-item__special-offer"><span>Sale</span></div>
+                        <div class="sale-item__image">
+                            <img src="images/product3.jpg" alt="product3">
+                            <div class="sale-item__shop-it">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span>Shop it</span>
+                            </div>
+                        </div>
+                        <div class="sale-item__details">
+                            <span class="sale-item__name">Mimosa Lace dress</span>
+                            <span class="sale-item__price">$76.95</span>
+                            <button class="btn">
+                                <span>Add to cart</span>
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </a>
+                </li>
+                <li class="products__slide active latest featured">
+                    <a href="#" class="sale-item">
+                        <div class="sale-item__image">
+                            <img src="images/product4.jpg" alt="product4">
+                            <div class="sale-item__shop-it">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span>Shop it</span>
+                            </div>
+                        </div>
+                        <div class="sale-item__details">
+                            <span class="sale-item__name">Mimosa Lace dress</span>
+                            <span class="sale-item__price">$76.95</span>
+                            <button class="btn">
+                                <span>Add to cart</span>
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </a>
+                </li>
+                <li class="products__slide active designers latest">
+                    <a href="#" class="sale-item">
+                        <div class="sale-item__special-offer"><span>Sale</span></div>
+                        <div class="sale-item__image">
+                            <img src="images/product5.jpg" alt="product5">
+                            <div class="sale-item__shop-it">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span>Shop it</span>
+                            </div>
+                        </div>
+                        <div class="sale-item__details">
+                            <span class="sale-item__name">Mimosa Lace dress</span>
+                            <span class="sale-item__price">$76.95</span>
+                            <button class="btn">
+                                <span>Add to cart</span>
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </a>
+                </li>
+                <li class="products__slide active latest designers">
+                    <a href="#" class="sale-item">
+                        <div class="sale-item__image">
+                            <img src="images/product1.jpg" alt="product1">
+                            <div class="sale-item__shop-it">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span>Shop it</span>
+                            </div>
+                        </div>
+                        <div class="sale-item__details">
+                            <span class="sale-item__name">Mimosa Lace dress</span>
+                            <span class="sale-item__price">$76.95</span>
+                            <button class="btn">
+                                <span>Add to cart</span>
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </a>
+                </li>
+                <li class="products__slide active featured latest">
+                    <a href="#" class="sale-item">
+                        <div class="sale-item__special-offer"><span>Sale</span></div>
+                        <div class="sale-item__image">
+                            <img src="images/product2.jpg" alt="product2">
+                            <div class="sale-item__shop-it">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span>Shop it</span>
+                            </div>
+                        </div>
+                        <div class="sale-item__details">
+                            <span class="sale-item__name">Mimosa Lace dress</span>
+                            <span class="sale-item__price">$76.95</span>
+                            <button class="btn">
+                                <span>Add to cart</span>
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </a>
+                </li>
+                <li class="products__slide active designers">
+                    <a href="#" class="sale-item">
+                        <div class="sale-item__image">
+                            <img src="images/product3.jpg" alt="product3">
+                            <div class="sale-item__shop-it">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span>Shop it</span>
+                            </div>
+                        </div>
+                        <div class="sale-item__details">
+                            <span class="sale-item__name">Mimosa Lace dress</span>
+                            <span class="sale-item__price">$76.95</span>
+                            <button class="btn">
+                                <span>Add to cart</span>
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </a>
+                </li>
+                <li class="products__slide active latest featured">
+                    <a href="#" class="sale-item">
+                        <div class="sale-item__special-offer"><span>Sale</span></div>
+                        <div class="sale-item__image">
+                            <img src="images/product4.jpg" alt="product4">
+                            <div class="sale-item__shop-it">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span>Shop it</span>
+                            </div>
+                        </div>
+                        <div class="sale-item__details">
+                            <span class="sale-item__name">Mimosa Lace dress</span>
+                            <span class="sale-item__price">$76.95</span>
+                            <button class="btn">
+                                <span>Add to cart</span>
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </a>
+                </li>
+                <li class="products__slide active featured">
+                    <a href="#" class="sale-item">
+                        <div class="sale-item__image">
+                            <img src="images/product5.jpg" alt="product5">
+                            <div class="sale-item__shop-it">
+                                <i class="fas fa-shopping-bag"></i>
+                                <span>Shop it</span>
+                            </div>
+                        </div>
+                        <div class="sale-item__details">
+                            <span class="sale-item__name">Mimosa Lace dress</span>
+                            <span class="sale-item__price">$76.95</span>
+                            <button class="btn">
+                                <span>Add to cart</span>
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <button id="showMobile" data-mobile=".products__slide" class="products__mobile-show">Load more</button>
+        </div>
+    </section>
+    <section class="special-offer container">
+        <div class="special-offer__icon">
+            <span class="special-offer__icon__line"></span>
+            <img class="special-offer__icon__img" src="images/discount.jpg" alt="discount">
+            <span class="special-offer__icon__line"></span>
+        </div>
+        <div class="special-offer__products">
+            <a href="#" class="sale-item sale-item--grey">
+                <div class="sale-item__image">
+                    <img src="images/product5.jpg" alt="product5">
+                    <div class="sale-item__shop-it">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>Shop it</span>
+                    </div>
+                </div>
+                <div class="sale-item__details">
+                    <span class="sale-item__name">Mimosa Lace dress</span>
+                    <span class="sale-item__price">$76.95</span>
+                    <button class="btn">
+                        <span>Add to cart</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </a>
+            <a href="#" class="sale-item sale-item--grey">
+                <div class="sale-item__image">
+                    <img src="images/product5.jpg" alt="product5">
+                    <div class="sale-item__shop-it">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>Shop it</span>
+                    </div>
+                </div>
+                <div class="sale-item__details">
+                    <span class="sale-item__name">Mimosa Lace dress</span>
+                    <span class="sale-item__price">$76.95</span>
+                    <button class="btn">
+                        <span>Add to cart</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </a>
+            <a href="#" class="sale-item sale-item--grey">
+                <div class="sale-item__image">
+                    <img src="images/product5.jpg" alt="product5">
+                    <div class="sale-item__shop-it">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>Shop it</span>
+                    </div>
+                </div>
+                <div class="sale-item__details">
+                    <span class="sale-item__name">Mimosa Lace dress</span>
+                    <span class="sale-item__price">$76.95</span>
+                    <button class="btn">
+                        <span>Add to cart</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </a>
+            <a href="#" class="sale-item sale-item--grey">
+                <div class="sale-item__image">
+                    <img src="images/product5.jpg" alt="product5">
+                    <div class="sale-item__shop-it">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>Shop it</span>
+                    </div>
+                </div>
+                <div class="sale-item__details">
+                    <span class="sale-item__name">Mimosa Lace dress</span>
+                    <span class="sale-item__price">$76.95</span>
+                    <button class="btn">
+                        <span>Add to cart</span>
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </a>
+        </div>
+    </section>
+    <section class="logos">
+        <div class="logos__title">
+            <span class="logos__title__line"></span>
+            <h4>favourite brands</h4>
+            <span class="logos__title__line"></span>
+        </div>
+        <div class="logos__container container">
+            <img src="images/logo-1.jpg" alt="logo 1">
+            <img src="images/logo-2.jpg" alt="logo 2">
+            <img src="images/logo-3.jpg" alt="logo 3">
+            <img src="images/logo-4.jpg" alt="logo 4">
+            <img src="images/logo-5.jpg" alt="logo 5">
+            <img src="images/logo-6.jpg" alt="logo 6">
+            <img src="images/logo-7.jpg" alt="logo 7">
+            <img src="images/logo-8.jpg" alt="logo 8">
+        </div>
+    </section>
+    <section class="about container">
+        <h3>About LookShop</h3>
+        <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue. </p>
+    </section>
+    <section class="credit-cards">
+        <span>We accept</span>
+        <img src="images/card-1.jpg" alt="card 1">
+        <img src="images/card-2.jpg" alt="card 2">
+        <img src="images/card-3.jpg" alt="card 3">
+        <img src="images/card-4.jpg" alt="card 4">
+        <img src="images/card-5.jpg" alt="card 5">
+        <img src="images/card-6.jpg" alt="card 6">
+        <img src="images/card-7.jpg" alt="card 7">
+        <img src="images/card-8.jpg" alt="card 8">
+        <img src="images/card-9.jpg" alt="card 9">
+        <img src="images/card-10.jpg" alt="card 10">
+        <img src="images/card-11.jpg" alt="card 11">
+    </section>
+    <footer>
+        <div id="footerContainer" class="footer-top">
+            <div class="footer-top__grid-container container">
+                <div class="footer-top__row footer-top__row__links">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Terms of payment</a></li>
+                        <li><a href="#">Terms of sale</a></li>
+                        <li><a href="#">Delivery terms and conditions</a></li>
+                        <li><a href="#">Returns and Refunds</a></li>
+                    </ul>
+                </div>
+                <div class="footer-top__row footer-top__row__links">
+                    <h4>Information</h4>
+                    <ul>
+                        <li><a href="#">Affiliate</a></li>
+                        <li><a href="#">Cookies</a></li>
+                        <li><a href="#">How to Shop</a></li>
+                        <li><a href="#">About Nelly</a></li>
+                        <li><a href="#">Investor relations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-top__row footer-top__row__links">
+                    <h4>Campaigns</h4>
+                    <ul>
+                        <li><a href="#">Evening dresses</a></li>
+                        <li><a href="#">Makeup</a></li>
+                        <li><a href="#">Fashion forward</a></li>
+                        <li><a href="#">training clothes</a></li>
+                        <li><a href="#">Special Occasion Dresses</a></li>
+                    </ul>
+                </div>
+                <div class="footer-top__row footer-top__row__links">
+                    <h4>Stores</h4>
+                    <ul>
+                        <li><a href="#">Paris</a></li>
+                        <li><a href="#">New York</a></li>
+                        <li><a href="#">London</a></li>
+                        <li><a href="#">Madrid</a></li>
+                        <li><a href="#">Tokio</a></li>
+                    </ul>
+                </div>
+                <div class="footer-top__row footer-top__row__social">
+                    <h4>Social</h4>
+                    <div class="footer-top__icon-container">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#"><i class="fab fa-vimeo-v"></i></a>
+                        <a href="#"><i class="fab fa-tumblr"></i></a>
+                    </div>
+                </div>
+                <div class="footer-top__row footer-top__row__image">
+                    <img src="images/100.jpg" alt="100% secure">
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <button class="footer-bottom__toggler" data-activate="#footerContainer"><i class="fas fa-bars"></i></button>
+            <ul class="footer-bottom__list">
+                <li><a href="#">Privacy & Cookies</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Accessibility</a></li>
+                <li><a href="#">Store Directory</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+            <span>© LookShop.com<br>All Rights Reserved</span>
+        </div>
+    </footer>
+    <script type="module" src="js/scripts.js"></script>
+</body>
+</html>
