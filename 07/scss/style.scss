@@ -1,6 +1,8 @@
 @import 'normalize', 'mixins';
 
 $white: #fff;
+$darkGrey: #666;
+$lightGrey: #8f8f8f;
 
 // GENERAL
 
@@ -19,6 +21,17 @@ h1 {
     color: $white;
     font-weight: 300;
     font-size: 40px;
+}
+
+p {
+    color: $darkGrey;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
 .background {
@@ -58,5 +71,196 @@ h1 {
         font-weight: 300;
         font-size: 14px;
         line-height: 22px;
+    }
+}
+
+// TIMELINE
+
+.timeline {
+    position: relative;
+    overflow: auto;
+    margin-top: 30px;
+    margin-bottom: 130px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+
+    &::before {
+        width: 20px;
+        height: 20px;
+        top: 0;
+        border-radius: 50%;
+        @include border($white, 5px);
+    }
+
+    &::after {
+        width: 5px;
+        background-color: $white;
+        top: 25px;
+        bottom: 0;
+    }
+
+    &__item {
+        width: 50%;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        padding: 0 30px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            @include border(#5f5a54, 3px);
+            top: 22px;
+            background-color: $white;
+        }
+
+        &:nth-child(odd){
+
+            &::before {
+                left: -8px;
+            }
+        }
+
+        &:nth-child(even){
+            margin-top: 125px;
+
+            &::before {
+                right: -8px;
+            }
+        }
+
+        &:nth-child(2){
+            margin-top: 100px;
+        }
+
+        &__container {
+            background-color: $white;
+            width: 100%;
+            min-height: 60px;
+            border-radius: 5px;
+            position: relative;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+
+            &::before {
+                content: "";
+                position: absolute;
+                background-color: $white;
+                width: 20px;
+                height: 20px;
+                transform: rotate(45deg);
+                top: 20px;
+                z-index: -1;
+            }
+
+            &--just-text {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+        }
+
+        &:nth-child(even) &__container::before {
+            right: -10px;
+        }
+
+        &:nth-child(odd) &__container::before {
+            left: -10px;
+        }
+
+        &__img-container {
+            position: relative;
+            margin-top: 20px;
+
+            & img {
+                width: 100%;
+                object-fit: cover;
+            }
+
+            & span {
+                position: absolute;
+                bottom: -4px;
+                right: 20px;
+                font-size: 30px;
+                color: $white;
+            }
+        }
+
+        &__comment-bar-heading {
+            display: flex;
+            padding: 10px 0;
+            color: $lightGrey;
+
+            & i {
+                margin-right: 10px;
+            }
+        }
+
+        &__comment-bar {
+            display: flex;
+            justify-content: space-between;
+
+            & textarea {
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 0;
+                resize: none;
+                @include border(lighten($lightGrey, 30%));
+                border-radius: 5px;
+                background-color: lighten($lightGrey, 40%);
+                padding: 5px;
+                font-size: 13px;
+            }
+
+            &__btn {
+                background-color: #86c5ff;
+                border-radius: 50%;
+                width: 45px;
+                height: 45px;
+                margin-left: 25px;
+                border: none;
+                flex-grow: 0;
+                flex-shrink: 0;
+                flex-basis: 45px;
+
+                & i {
+                    color: $white;
+                    font-size: 25px;
+                }
+            }
+        }
+
+        &__add-image {
+            border: none;
+            background-color: #ff8cc1;
+            color: $white;
+            border-radius: 50%;
+            flex-basis: 30px;
+            flex-grow: 0;
+            flex-shrink: 0;
+            width: 30px;
+            height: 30px;
+
+            & i {
+                font-size: 18px;
+            }
+        }    
     }
 }
