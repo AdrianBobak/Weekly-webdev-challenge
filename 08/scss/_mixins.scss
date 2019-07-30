@@ -4,7 +4,7 @@
     grid-gap: $gap;
 }
 
-@mixin border($color, $pixels: 1px, $direction: null){
+@mixin border($color, $direction: null, $pixels: 1px){
     @if($direction != null){
         border-#{$direction}: $pixels solid $color;
     } @else {

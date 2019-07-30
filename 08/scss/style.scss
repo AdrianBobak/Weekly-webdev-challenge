@@ -1,8 +1,169 @@
-@import 'normalize', 'mixins';
+@import 'normalize', 'variables', 'mixins';
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Quicksand', sans-serif;
 }
 
+body {
+    margin-top: $navbarHeight;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0px 6px 15px -9px rgba(0,0,0,0.75);
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: $navbarHeight;
+        background-color: $white;
+        padding-right: 0;
+    }
+
+    &__logo {
+        margin-right: auto;
+        padding: 13px 0;
+
+        & img {
+            max-height: 100%;
+        }
+    }
+
+    &__socials {
+        margin-right: 15px;
+
+        & i {
+            font-size: 25px;
+            margin: 0 15px;
+            color: $black;
+        }
+    }
+
+    &__menu {
+        background-color: $black;
+        display: flex;
+        height: 100%;
+        width: 230px;
+        position: relative;
+    }
+
+    &__menu-toggler {
+        background-color: transparent;
+        border: none;
+        color: $white;
+        display: flex;
+        align-items: center;
+        padding: 0 25px;
+        width: 100%;
+
+        & i {
+            font-size: 20px;
+            margin-right: 10px;
+        }
+
+        & span {
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+    }
+
+    &__menu-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color:$black;
+        padding: 0 25px;
+        transition: 0.3s;
+        height: 0;
+        overflow: hidden;
+        z-index: -1;
+
+        &.active {
+            height: 100vh;
+            padding: 105px 25px 25px 25px;
+        }
+    }
+
+    &__menu-item {
+        list-style: none;
+        font-size: 16px;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        @include border($white, bottom);
+
+        &:last-child {
+            border-bottom: none;
+        }
+        
+        & a {
+            margin-left: 10px;
+            display: block;
+            color: $white;
+            text-decoration: none;
+        }
+    }
+
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    &::before {
+        background-color: $white;
+        left: 0;
+    }
+
+    &::after {
+        background-color: $black;
+        right: 0;
+    }
+}
+
+@media (max-width: 650px){
+    .main-header {
+
+        &__socials {
+            display: none;
+        }
+
+        &__menu {
+            width: auto;
+            background-color: $white;
+            position: static;
+        }
+
+        &__menu-toggler {
+
+            & span {
+                display: none;
+            }
+
+            & i {
+                margin-right: 0;
+                color: $black;
+            }
+        }
+    }
+}
